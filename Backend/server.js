@@ -15,10 +15,10 @@ app.use("/api/todos", router)//Use router handler as middleware
 const __dirname = path.resolve()
 
 if(process.env.NODE_ENV === "production"){
-    app.use(express.static(path.join(__dirname, "/frontend/dist"))) //__dirname points to root
+    app.use(express.static(path.join(__dirname, "/Frontend/dist"))) //__dirname points to root
 
     app.get("*", (req, res)=>{ //If we send any request then render react application which is index.html under dist folder
-        res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html") )
+        res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html") )
     })
 
 
