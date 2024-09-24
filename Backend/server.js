@@ -1,7 +1,7 @@
 import express from "express"
 import dotenv from "dotenv"
 import ConnectDB from "./config/db.js"
-import router from "./routes/todoitem.route.js"
+import router from "./routes/todoItem.route.js"
 import path from "path"
 const app = express()
 const port = process.env.PORT || 8000
